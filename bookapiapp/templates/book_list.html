@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title%} Book List {% endblock %}
+
+{% block body %}
+<h2>Recommended Books</h2>
+<ul>
+    {% for book in books %}
+    <li>
+        <h3>{{ book.title }}</h3>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+        <p><strong>Publication Date:</strong> {{ book.publication_date }}</p>
+        <p><strong>Rating:</strong> {{ book.rating }}</p>
+        <!-- Add more details as needed -->
+    </li>
+    {% empty %}
+    <li>No books found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
