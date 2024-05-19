@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'bookapiapp',
     'rest_framework',
     'django_filters',
+    'drf_yasg',  # this is for the api documentation packeges
 
 ]
 
@@ -79,6 +80,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }
 
 # Password validation
