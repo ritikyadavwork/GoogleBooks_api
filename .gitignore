@@ -1,10 +1,5 @@
-.idea
-__pycache__/
+.idea/
 db.sqlite3
-staticfiles/
+staticfiles
+__pycache__/
 media/
-venv/
-
-.env
-.envs/*
-!.envs/.local/
