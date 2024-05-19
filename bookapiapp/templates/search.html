@@ -19,6 +19,7 @@
     {% for book in books %}
     <li>
         <h2>{{ book.title }}</h2>
+
         <p><strong>Authors:</strong> {{ book.authors|join:", " }}</p>
         <p><strong>Description:</strong> {{ book.description }}</p>
         <p><strong>Ratings Count:</strong> {{ book.ratings_count }}</p>
@@ -29,5 +30,10 @@
     </li>
     {% endfor %}
 </ul>
-
+<form method="get" action="">
+    <input type="text" name='keyword' placeholder="Search by Keyword">
+    <input type="text" name='author' placeholder="Search by Author">
+    <input type="text" name='category' placeholder="Search by Category">
+    <button type="submit">Search</button>
+</form>
 {% endblock %}
