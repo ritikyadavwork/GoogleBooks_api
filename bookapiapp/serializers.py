@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Book, UserInteraction
+from .models import Recommendation, UserInteraction
 
 
-class BookSerializer(serializers.ModelSerializer):
+class RecommendationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Book
+        model = Recommendation
         fields = '__all__'
 
 
